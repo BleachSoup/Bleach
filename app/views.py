@@ -43,3 +43,16 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def world(request):
+    """Renders the world page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/world.html',
+        {
+            'title':'World Generator',
+            'message':'Under Contruction',
+            'year':datetime.now().year,
+        }
+    )
